@@ -26,3 +26,18 @@ function validateEmailAddress() {
     emailInput.setCustomValidity("Invalid Email Address");
   }
 }
+
+function validatePhoneNumber() {
+  const phoneNumberInput = document.getElementById("phone-number");
+  const phoneNumber = phoneNumberInput.value;
+  const regex = /^91\s\d{10}$/;
+  const errorSpan = document.getElementById("phone-number-error");
+
+  if (regex.test(phoneNumber)) {
+    errorSpan.innerText = "";
+    emailInput.setCustomValidity("");
+  } else {
+    errorSpan.innerText = "Please enter a valid phone Number";
+    emailInput.setCustomValidity("Invalid Phone Number");
+  }
+}
