@@ -41,3 +41,18 @@ function validatePhoneNumber() {
     emailInput.setCustomValidity("Invalid Phone Number");
   }
 }
+
+function validatePassword() {
+  const phoneNumberInput = document.getElementById("password");
+  const phoneNumber = phoneNumberInput.value;
+  const regex = /^[A-Z][a-z]{7,}[0-9]+[@#$%&]$/;
+  const errorSpan = document.getElementById("password-error");
+
+  if (regex.test(phoneNumber)) {
+    errorSpan.innerText = "";
+    emailInput.setCustomValidity("");
+  } else {
+    errorSpan.innerText = "Please enter a valid Password";
+    emailInput.setCustomValidity("Invalid Password");
+  }
+}

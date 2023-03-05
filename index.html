@@ -21,7 +21,8 @@
                 </div>
                 <div class="input-box">
                   <span class="details">Password</span>
-                  <input type="password" placeholder="Enter your password" required>
+                  <input type="password" placeholder="Enter your password" id="password" name="password" required pattern="^[A-Z][a-z]{7,}[0-9]+[@#$%&]$" oninput="validatePassword()">
+                  <span class="error-message" id="password-error"></span>
                 </div>
                 <div class="input-box">
                   <span class="details">Email</span>
