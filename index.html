@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Registration Form</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       </head>
+       <body>
+        <div class="container">
+          <!-- <div class="title">Registration</div> -->
+          <div class="content">
+            <form action="#">
+              <header class="headerContainer title">HTML5 Registration Form</header>
+              <div class="user-details">
+                <div class="input-box">
+                  <span class="details">First Name</span>
+                  <input type="text" placeholder="Eg Prohit" id="first-name" name="first-name" required pattern="^[A-Z][a-z]{2,}$" oninput="validateFirstName()">
+                  <!-- <span class="error-message" id="first-name-error"></span> -->
+                  <span class="error-message" id="first-name-error"></span>
+                </div>
+                <div class="input-box">
+                  <span class="details">Password</span>
+                  <input type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Email</span>
+                  <input type="text" placeholder="Enter your email" id="email-address" name="email-address" required pattern="^[a-z]{3,}[-_+.a-z0-9]*[@][0-1a-z]+[.][a-z]{2,}[.]?[,a-z]{0,3}$" oninput="validateEmailAddress()">
+                  <span class="error-message" id="email-address-error"></span>
+                </div>
+                <div class="input-box">
+                  <span class="details">URL</span>
+                  <input type="url" placeholder="Enter your url" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Phone Number</span>
+                  <input type="tel" id="phone-number" name="phone-number" required pattern="^91\s\d{10}$" placeholder="+91 1234567890">
+                  <span class="error-message" id="phone-number-error"></span>
+                </div>
+                <div class="input-box">
+                  <span class="details">Tel</span>
+                  <input type="tel" id="phone-number" name="phone-number" required pattern="^91\s\d{10}$" placeholder="+91 1234567890">
+                  <span class="error-message" id="phone-number-error"></span>
+                </div>
+                <div class="input-box">
+                  <span class="details">Search</span>
+                  <input type="search" placeholder="Search" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Date And Time</span>
+                  <input type="datetime-local" placeholder="Date And Time" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Salary</span>
+                  <input type="range" required>
+                  <output class="salary-output" for="salary">40000</output>
+                </div>
+              </div>
+              <div class="button">
+                <input type="submit" value="Register">
+              </div>
+            </form>
+          </div>
+        </div>
+        <script src="validate.js"></script>
+      </body>
+</html>
